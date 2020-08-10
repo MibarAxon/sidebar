@@ -12,11 +12,11 @@ export const data = {
     "categories" : [
         {
             "label": "Home",
-            "icon" : <MdHome/>,
+            "Icon" : <MdHome/>,
         },
         {
             "label": "Contabilidad",
-            "icon": <MdAccountBalance/>,
+            "Icon": <MdAccountBalance/>,
             "children": [
                 "Justificantes",
                 "Credenciales",
@@ -25,7 +25,7 @@ export const data = {
         },
         {
             "label": "Academico",
-            "icon": <MdSchool/>,
+            "Icon": <MdSchool/>,
             "children": [
                 "Materiales",
                 "ABM Posgrados",
@@ -36,21 +36,21 @@ export const data = {
         },
         {
             "label": "Reportes",
-            "icon": <FaChartBar/>,
+            "Icon": <FaChartBar/>,
             "children" : [
                 "Ventas"
             ]
         },
         {
             "label": "Cobranzas",
-            "icon": <MdHeadsetMic/>,
+            "Icon": <MdHeadsetMic/>,
             "children": [
                 "Cascada congelada"
             ]
         },
         {
             "label": "Ventas",
-            "icon": <MdAttachMoney/>,
+            "Icon": <MdAttachMoney/>,
             "children": [
                 "Cascada ventas"
             ]
