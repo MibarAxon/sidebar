@@ -10,8 +10,8 @@ const routes = (baseRoute ='') => (<>
     <Header />
     <Sidebar {...data}/>
     <Switch >
-        <Route exact path={`/${baseRoute}home`} component={<HomePage />} />
-        <Route path={`/${baseRoute}contabilidad`} component={<Contabilidad />}/>
+        <Route exact path={`${baseRoute}/home`} component={<HomePage />} />
+        <Route path={`${baseRoute}/contabilidad`} component={<Contabilidad />}/>
     </Switch>
 </>)
 

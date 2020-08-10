@@ -6,7 +6,7 @@ export const data = {
     "baseRoute": "adm", //la URL base para poder imprimir los componentes correspondientes a las rutas del router
     "section": "Administracion",
     "iconStyle": {
-        color:"red"
+        fontSize:"50px",
     },
     "preSelectedCategory": "Home",
     "categories" : [
