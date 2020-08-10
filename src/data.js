@@ -3,10 +3,10 @@ import {MdHome, MdAccountBalance, MdSchool, MdHeadsetMic, MdAttachMoney} from 'r
 import {FaChartBar} from 'react-icons/fa'
 
 export const data = {
-    "baseRoute": "adm", //la URL base para poder imprimir los componentes correspondientes a las rutas del router
+    "baseRoute": "/adm", //la URL base para poder imprimir los componentes correspondientes a las rutas del router
     "section": "Administracion",
     "iconStyle": {
-        fontSize:"50px",
+        color: "red"
     },
     "preSelectedCategory": "Home",
     "categories" : [

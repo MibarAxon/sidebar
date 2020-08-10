@@ -7,21 +7,21 @@ export const expansionContext = createContext();
 export const implementationContext = createContext();
 
 const Sidebar = ({section,  baseRoute, iconStyle, preSelectedCategory, categories}) => {
-    const [isExpanded, setIsExpanded] = useState(false);
+    const [isSidebarExpanded, setIsSidebarExpanded] = useState(false);
     return (
-        <expansionContext.Provider value={{ isExpanded, setIsExpanded }}>
+        <expansionContext.Provider value={{ isSidebarExpanded, setIsSidebarExpanded }}>
             <implementationContext.Provider value={{baseRoute, iconStyle, preSelectedCategory, categories }}>
             {/*<-------------------------------------- COMPONENT --------------------------------------> */}
-                <aside className={`${Styles.container} ${isExpanded? Styles.containerExpanded:''}`}>
+                <aside className={`${Styles.container} ${isSidebarExpanded? Styles.containerExpanded:''}`}>
                     <div className={Styles.header}>
-                        <h2 className={`${Styles.header__tittle } ${isExpanded? Styles.header__tittleExpanded:''}`}>
+                        <h2 className={`${Styles.header__tittle } ${isSidebarExpanded? Styles.header__tittleExpanded:''}`}>
                             {section}
                         </h2>
                         <div
-                            className={`${Styles.hamburgerMenu} ${isExpanded ? Styles.hamburgerMenuExpanded :''}`}
-                            onClick={() => setIsExpanded(prevState => !prevState)}
+                            className={`${Styles.hamburgerMenu} ${isSidebarExpanded ? Styles.hamburgerMenuExpanded :''}`}
+                            onClick={() => setIsSidebarExpanded(prevState => !prevState)}
                         >
-                            <span className={`${Styles.stick} ${isExpanded ?  Styles.stickExpanded: ''}`}></span>
+                            <span className={`${Styles.stick} ${isSidebarExpanded ?  Styles.stickExpanded: ''}`}></span>
                         </div>
                     </div>
                     <NavigationMenu categories={categories} />

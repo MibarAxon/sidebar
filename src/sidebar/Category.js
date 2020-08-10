@@ -1,4 +1,4 @@
-import React, {useContext} from 'react'
+import React, {useContext, useState} from 'react'
 import {NavLink, withRouter} from 'react-router-dom'
 import {MdKeyboardArrowDown} from 'react-icons/md'
 import * as Styles from './Category.module.css' 
@@ -6,23 +6,23 @@ import {expansionContext, implementationContext} from './Sidebar'
 
 const Category = ({label,Icon,children}) => {
     
-    const { isExpanded, setIsExpanded } = useContext(expansionContext)
-    const { baseRoute } = useContext(implementationContext)
-
+    const [ isExpanded, setIsExpanded] = useState(false);
+    const { isSidebarExpanded, setIsSidebarExpanded } = useContext(expansionContext);
+    const { baseRoute } = useContext(implementationContext);
+    
     return (
-        <li 
-            className={Styles.container}
-            key={label}
-        >
             <NavLink 
                 to={`${baseRoute}/${label.toLowerCase()}`}
-                className={Styles.navigationLink}
+                className={Styles.container}
+                onClick={()=> {
+                if(!!children) setIsExpanded(prevState => !prevState)
+            }}
             >
                 {Icon}
-                {label}
-                {!!children && <MdKeyboardArrowDown className={`${Styles.arrow} ${isExpanded? Styles.arrowExpanded:''}`}/>}
+                <p className={`${Styles.label} ${isSidebarExpanded? Styles.labelExpanded:''}`}>{label}</p>
+                {!!isSidebarExpanded && !!children && <MdKeyboardArrowDown className={`${Styles.arrow} ${isExpanded? Styles.arrowExpanded:''}`}/>}
+                {/* {aca verificamos si el sidebar esta expandido y si tiene hijos a renderizar para mostrar la flecha o no} */}
             </NavLink>
-        </li>
     )
 }
 
