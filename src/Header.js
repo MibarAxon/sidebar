@@ -26,9 +26,7 @@ const Header = ({ fetchUserInformation }) => {
       >
         Axon
       </h1>
-      <div style={{ position: "relative" }}>
-        <SwitchAplication />
-      </div>
+      <div style={{ position: "relative" }}>{/* <SwitchAplication /> */}</div>
     </header>
   );
 };

@@ -3,11 +3,11 @@ import "bootstrap/dist/css/bootstrap.css";
 function Logo() {
   return (
     <>
-      <div className="p-3 mb-4">
+      <div className="p-3 mb-4 mx-auto">
         <img
           src="https://axon-campus.s3.us-east-2.amazonaws.com/otros/axon_logo_blanco.png"
           alt=""
-          className="img-fluid logo-switch"
+          className="img-fluid logo-switch "
         />
       </div>
 

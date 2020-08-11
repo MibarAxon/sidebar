@@ -2,6 +2,9 @@ import React, { useState, createContext } from "react";
 import { withRouter, Switch } from "react-router-dom";
 import NavigationMenu from "./NavigationMenu";
 import * as Styles from "./Sidebar.module.css";
+import SwitchAplication from "../SwitchAplication/Switch-Alication";
+
+//1) Creamos el contexto
 export const expansionContext = createContext();
 export const implementationContext = createContext();
 
@@ -14,6 +17,7 @@ const Sidebar = ({
 }) => {
   const [isSidebarExpanded, setIsSidebarExpanded] = useState(false);
   return (
+    // 2) Proveemos la informacion del contexto
     <expansionContext.Provider
       value={{ isSidebarExpanded, setIsSidebarExpanded }}
     >
@@ -47,7 +51,17 @@ const Sidebar = ({
               ></span>
             </div>
           </div>
+
           <NavigationMenu categories={categories} />
+
+          <SwitchAplication
+            className={`${Styles.appButton} ${
+              isSidebarExpanded ? Styles.appButtonExpanded : ""
+            }`}
+          />
+          {isSidebarExpanded && (
+            <p className={Styles.applicationsLabel}>Applications</p>
+          )}
         </aside>
         {/*<-------------------------------------- COMPONENT --------------------------------------> */}
       </implementationContext.Provider>

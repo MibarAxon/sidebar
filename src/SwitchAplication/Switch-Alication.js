@@ -9,7 +9,6 @@ function SwitchAplication() {
   return (
     <div>
       <Menu
-        right
         width={330}
         customBurgerIcon={
           <img src="https://accounts.freshworks.com/omnibar/assets/apps.svg" />
@@ -22,26 +21,15 @@ function SwitchAplication() {
 
       <style jsx>
         {`
-          /* Position and sizing of burger button */
           .bm-burger-button {
-            position: fixed;
-            width: 36px;
-            height: 30px;
-            top: 10px;
-            right: 20px;
+            position: absolute;
+            width: 24px;
+            height: 24px;
+            bottom: 10px;
+            left: 24px;
+            z-index: 215000;
           }
 
-          /* Color/shape of burger icon bars */
-          .bm-burger-bars {
-            background: #373a47;
-          }
-
-          /* Color/shape of burger icon bars on hover*/
-          .bm-burger-bars-hover {
-            background: #a90000;
-          }
-
-          /* Position and sizing of clickable cross button */
           .bm-cross-button {
             height: 24px;
             width: 24px;
@@ -52,11 +40,8 @@ function SwitchAplication() {
             background: #c6e6ff;
           }
 
-          /*
-Sidebar wrapper styles
-Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
-*/
           .bm-menu-wrap {
+            top: 0px;
             position: fixed;
             height: 100%;
           }
@@ -80,6 +65,8 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
           /* Styling of overlay */
           .bm-overlay {
+            top: 0px;
+            position: fixed;
             background: rgba(0, 0, 0, 0.3);
           }
         `}

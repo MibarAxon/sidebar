@@ -1,117 +1,136 @@
-:root{
-    --menu-width : 28px;
-    --transition-duration: 0.8s
+:root {
+  --menu-width: 28px;
+  --transition-duration: 0.8s;
 }
 
-.container { 
-    height: calc(100vh - 50px); 
-    width: 70px;
-    background-color: #212121;
-    color: rgba(255, 255, 255, 0.75);
-    font-family: 'Roboto', sans-serif;
-    display: flex;
-    flex-flow: column nowrap;
-    transition: all var(--transition-duration);
-    background-color: rgba(0, 0, 0, .9);
-    box-shadow: 2px 0px 8px 2px rgba(0, 0, 0, 0.5);
-    position: relative;
-    overflow: hidden;
+.container {
+  height: calc(100vh - 50px);
+  width: 70px;
+  background-color: #212121;
+  color: rgba(255, 255, 255, 0.75);
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-flow: column nowrap;
+  transition: all var(--transition-duration);
+  background-color: rgba(0, 0, 0, 0.9);
+  box-shadow: 2px 0px 8px 2px rgba(0, 0, 0, 0.5);
+  position: relative;
+  overflow: hidden;
 }
 
 .containerExpanded {
-    width: 15%;
+  width: 15%;
 }
 
 .container::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 40%; 
-    bottom: 0;
-    width: 90%;
-    transform: skew(-10deg);
-    background-image: linear-gradient( black, #424242);
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 40%;
+  bottom: 0;
+  width: 90%;
+  transform: skew(-10deg);
+  background-image: linear-gradient(black, #424242);
 }
 .container::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 50%;
-    width: 700px;
-    height: 100%;
-    transform: skew(-40deg);
-    background-image: linear-gradient( #424242, black);
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 700px;
+  height: 100%;
+  transform: skew(-40deg);
+  background-image: linear-gradient(#424242, black);
 }
 
-.header{
-    width: 100%;
-    height: 50px;
-    padding-left: 30px;
-    font-size: 24px;
-    position: relative;
-    display: flex;
-    align-items: center;
-    z-index:22;
-    border-bottom: 1px rgba(255,255,255,.4) solid;
+.header {
+  width: 100%;
+  height: 50px;
+  padding-left: 30px;
+  font-size: 24px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  z-index: 22;
+  border-bottom: 1px rgba(255, 255, 255, 0.4) solid;
 }
 
-.header__tittle{
-    opacity: 0;
-    transition: all .5s;
+.header__tittle {
+  opacity: 0;
+  transition: all 0.5s;
 }
 
-.header__tittleExpanded{
-    opacity: 1;
+.header__tittleExpanded {
+  opacity: 1;
 }
 
-.hamburgerMenu{
-    display: block;
-    width: 28px;
-    height: 32px;
-    cursor: pointer;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%,-50%);
-    transition: all var(--transition-duration);
-    z-index: 1000;
+.hamburgerMenu {
+  display: block;
+  width: 28px;
+  height: 32px;
+  cursor: pointer;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: all var(--transition-duration);
+  z-index: 1000;
 }
 
 .hamburgerMenuExpanded {
-    left: auto;
-    right: 0px;
-    transform: translate(-50%, -50%);
+  left: auto;
+  right: 0px;
+  transform: translate(-50%, -50%);
 }
 
-.stick, .stick::after, .stick::before{
-    position: absolute;
-    top: 50%;
-    width: var(--menu-width);
-    height: 4px;
-    background-color: white;
-    transition: all var(--transition-duration);
+.stick,
+.stick::after,
+.stick::before {
+  position: absolute;
+  top: 50%;
+  width: var(--menu-width);
+  height: 4px;
+  background-color: white;
+  transition: all var(--transition-duration);
 }
 
-.stick::before{
-    content: '';
-    top: -10px;
-    left: 0;
-    transform-origin: 100% 50%;
+.stick::before {
+  content: "";
+  top: -10px;
+  left: 0;
+  transform-origin: 100% 50%;
 }
-.stick::after{
-    content: '';
-    top: 10px;
-    left: 0;
-    transform-origin: 100% 50%;
+.stick::after {
+  content: "";
+  top: 10px;
+  left: 0;
+  transform-origin: 100% 50%;
 }
 
+.stickExpanded {
+  transform: rotate(180deg);
+}
+.stickExpanded::after {
+  transform: translateY(-10px) rotate(-45deg) scale(0.5);
+}
+.stickExpanded::before {
+  transform: translateY(10px) rotate(45deg) scale(0.5);
+}
 
-.stickExpanded{
-    transform: rotate(180deg);
+/* integracion con santi */
+
+.applicationsLabel {
+  position: absolute;
+  left: 70px;
+  bottom: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  z-index: 19000;
 }
-.stickExpanded::after{
-    transform: translateY(-10px) rotate(-45deg) scale(0.5);
+.appButton {
+  transform: rotate(0deg);
+  transition: all 1s;
 }
-.stickExpanded::before{
-    transform: translateY(10px) rotate(45deg) scale(0.5);
+.appButtonExpanded {
+  transform: rotate(180deg);
 }
