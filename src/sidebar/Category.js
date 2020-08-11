@@ -9,14 +9,19 @@ const Category = ({label,Icon,children}) => {
     const [ isExpanded, setIsExpanded] = useState(false);
     const { isSidebarExpanded, setIsSidebarExpanded } = useContext(expansionContext);
     const { baseRoute } = useContext(implementationContext);
-    
+    const clickHandler = () => {
+        if(!!children) {
+            setIsExpanded(prevState => !prevState)
+            setIsSidebarExpanded(prevState => (prevState)? prevState: !prevState)
+        }
+    }
+
     return (
             <NavLink 
                 to={`${baseRoute}/${label.toLowerCase()}`}
-                className={Styles.container}
-                onClick={()=> {
-                if(!!children) setIsExpanded(prevState => !prevState)
-            }}
+                className={`${Styles.container} ${isSidebarExpanded? Styles.containerExpanded:''}`}
+                activeStyle={{borderLeft: '3px solid white', backgroundColor: "rgba(0, 0, 0, .7)"}}
+                onClick={clickHandler}
             >
                 {Icon}
                 <p className={`${Styles.label} ${isSidebarExpanded? Styles.labelExpanded:''}`}>{label}</p>
