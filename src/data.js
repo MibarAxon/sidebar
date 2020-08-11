@@ -28,10 +28,8 @@ export const data = {
             "Icon": <MdSchool/>,
             "children": [
                 "Materiales",
-                "ABM Posgrados",
-                {
-                    "Reportes" : ["Alumnos por etapa"]
-                },
+                "Posgrados",
+                "Reportes"
             ]
         },
         {
@@ -45,14 +43,14 @@ export const data = {
             "label": "Cobranzas",
             "Icon": <MdHeadsetMic/>,
             "children": [
-                "Cascada congelada"
+                "Cascada-congelada"
             ]
         },
         {
             "label": "Ventas",
             "Icon": <MdAttachMoney/>,
             "children": [
-                "Cascada ventas"
+                "Cascada-ventas"
             ]
         }
     ]

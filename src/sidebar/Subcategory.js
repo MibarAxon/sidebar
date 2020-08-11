@@ -6,10 +6,10 @@ import {implementationContext} from './Sidebar'
 const Subcategory = ({baseRoute,isExpanded, children}) => {
 
     const { iconStyle } = useContext(implementationContext);
-
-    const render = children.map(child =>{
-        if(typeof(child) === "string"){
-            return (
+        
+    return (
+        <ul  className={`${Styles.container} ${isExpanded? Styles.containerExpanded: ''}`}>
+            {children.map(child =>(  
                 <NavLink 
                     key={child} 
                     activeStyle={{color : iconStyle.color}} 
@@ -18,18 +18,7 @@ const Subcategory = ({baseRoute,isExpanded, children}) => {
                 >
                     {child}
                 </NavLink>
-            )
-        }else if(typeof(child)==="object"){
-            return false 
-            // for (const key in child){
-            //     return false
-            // }
-        }
-    })
-        
-    return (
-        <ul  className={`${Styles.container} ${isExpanded? Styles.containerExpanded: ''}`}>
-            {render}
+            ))}
         </ul>
     )
 }
