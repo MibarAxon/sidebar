@@ -1,10 +1,13 @@
 import React from "react";
 import SwitchAplication from "./SwitchAplication/Switch-Alication";
+import DropdownBtn from "./DropdownBtn"
 
 const Header = ({ fetchUserInformation }) => {
   return (
     <header
       style={{
+        display: "flex",
+        justifyContent: "space-between",
         padding: "0 8px",
         boxShadow: "0 2px 8px 2px rgba(0, 0, 0, 0.5)",
         display: "flex",
@@ -13,7 +16,7 @@ const Header = ({ fetchUserInformation }) => {
         fontFamily: "'Roboto', sans-serif",
         fontWeight: "400",
         zIndex: "8",
-        height: "50px",
+        height: "70px",
         width: "100%",
       }}
     >
@@ -26,7 +29,7 @@ const Header = ({ fetchUserInformation }) => {
       >
         Axon
       </h1>
-      <div style={{ position: "relative" }}>{/* <SwitchAplication /> */}</div>
+     <DropdownBtn />
     </header>
   );
 };
