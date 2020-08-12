@@ -12,10 +12,10 @@ function Aplications() {
   return (
     <>
       <div className="  d-flex bg-white rounded mt-5 aplitacion-container flex-wrap  p-3">
-        <div className="col-12 mb-3 text-muted">
+        <div className="col-12 mb-3 text-muted text-center">
           <h6>Otros sitios de Axon</h6>
         </div>
-        <div className="col-4 mx-auto pt-3">
+        <div className="col-4 mx-auto pt-3 text-center">
           <a className="link" href="http://adm.axontraining.com/">
             <FaCalculator className=" border-axon adm p-2" />
           </a>
@@ -31,21 +31,21 @@ function Aplications() {
 
           <p className="aplication-title text-muted text-center ">Academico</p>
         </div>
-        <div className="col-4 mx-auto pt-3">
+        <div className="col-4 mx-auto pt-3 text-center">
           <a className="link" href="http://academico.axontraining.com/">
             <FaUserGraduate className=" border-axon campus p-2" />
           </a>
 
           <p className="aplication-title text-muted text-center">Campus</p>
         </div>
-        <div className="col-4 mx-auto pt-3">
+        <div className="col-4 mx-auto pt-3 text-center">
           <a className="link" href="https://campus.axontraining.com/">
             <FaIndustry className=" border-axon intranet p-2 " />
           </a>
 
           <p className="aplication-title text-muted text-center">Intranet</p>
         </div>
-        <div className="col-4 mx-auto pt-3">
+        <div className="col-4 mx-auto pt-3 text-center">
           <a className="link" href="https://profesores.axontraining.com/">
             <FaUniversity className=" border-axon profesores p-2 " />
           </a>

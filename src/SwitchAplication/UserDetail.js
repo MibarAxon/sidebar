@@ -11,9 +11,11 @@ function UserDetail(props) {
           />
         </div>
         <div className="col-7 mx-auto my-auto text-left">
-          <p className="m-0  name ">{props.nombre}</p>
-          <p className="m-0  text-muted text-truncate email ">{props.email}</p>
-          <div className=" d-flex email ">
+          <p className="m-0  name  text-dark">{props.nombre}</p>
+          <p className="m-0  text-muted text-truncate email mt-2 ">
+            {props.email}
+          </p>
+          <div className=" d-flex email  mt-2">
             <a className="mr-1" href="https://campus.axontraining.com/perfil">
               Mi Perfil
             </a>
