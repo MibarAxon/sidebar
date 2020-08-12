@@ -4,9 +4,9 @@ function UserDetail(props) {
   return (
     <>
       <div className=" d-flex profile-container p-1 bg-white rounded">
-        <div className="col-5">
+        <div className="col-5 mx-auto my-auto">
           <img
-            className="img-profile my-auto mx-auto"
+            className="img-profile   img-fluid mx-auto"
             src="https://img.autocosmos.com/noticias/fotosprinc/NAZ_86a6e5567e944d94bfde63d2e19ebe7a.jpg"
           />
         </div>
@@ -16,7 +16,7 @@ function UserDetail(props) {
             {props.email}
           </p>
           <div className=" d-flex email  mt-2">
-            <a className="mr-1" href="https://campus.axontraining.com/perfil">
+            <a className="mr-1 " href="https://campus.axontraining.com/perfil">
               Mi Perfil
             </a>
 
@@ -28,8 +28,6 @@ function UserDetail(props) {
       <style jsx>
         {`
           .img-profile {
-            width: 100%;
-            height: 100%;
             border-radius: 100%;
           }
 
@@ -41,6 +39,9 @@ function UserDetail(props) {
           }
           .email {
             font-size: 10px;
+          }
+          .email a {
+            text-decoration: none;
           }
         `}
       </style>
