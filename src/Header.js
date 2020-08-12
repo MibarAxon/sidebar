@@ -1,5 +1,4 @@
 import React from "react";
-import SwitchAplication from "./SwitchAplication/Switch-Alication";
 import DropdownBtn from "./DropdownBtn"
 
 const Header = ({ fetchUserInformation }) => {
